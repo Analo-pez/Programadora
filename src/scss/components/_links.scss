@@ -1,9 +1,5 @@
-.link__adalab:hover {
-  background-color: #099d8d;
-  color: #fff;
-}
-
-.link__github:hover {
-  background-color: #CCC;
-  color: #000;
+.link__primary:hover {
+  background-color: $color-primary;
+  padding: 1em;
+  border-radius: 10px;
 }

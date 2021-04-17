@@ -1,7 +1,20 @@
-body {
-  padding: 2rem;
-  height: 100vh;
-  background-image: url('../images/bg-adalab.png');
-  background-color: $color-bg;
-  font-family: $font-main;
+.page__main{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  &--title{
+  align-self: center;
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
+  }
+
+  &--list{
+    display: flex;
+    align-self: center;
+    gap: 2em;
+  }
 }
+
+
+

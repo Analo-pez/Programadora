@@ -1,4 +1,11 @@
-.main__list {
-  padding-left: 2rem;
-  padding-bottom: 20px;
+body {
+  height: 100vh;
+  background-color: $color-bg;
+  font-family: $font-main;
+}
+
+.wrapper{
+  max-width: 1000px;
+  min-width: 400px;
+  margin: 0 auto;
 }

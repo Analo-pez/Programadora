@@ -1,0 +1,28 @@
+.page__hero{
+display: flex;
+align-items: center;
+background-color: $color-primary;
+opacity: 0.8;
+background-image:  radial-gradient(#a045f7 1px, transparent 1px), radial-gradient(#a045f7 1px, $color-primary 1px);
+background-size: 40px 40px;
+height: 50vh;
+
+&--box{
+  display: flex;
+  align-items: center;
+  &--title{
+      font-size: 3em;
+      padding: 0.5em;
+      margin: 1em;
+  }
+  &--img{
+    width: 10em;
+    @media all and (min-width: 768px) {
+        width: 14em;
+    }
+    @media all and (min-width: 1000px) {
+        width: 18em;
+    }
+  }
+}
+}

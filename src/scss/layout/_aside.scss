@@ -1,0 +1,27 @@
+.page__aside{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-bottom: 2em;
+    // background-color: $color-primary;
+
+    &--title{
+    align-self: center;
+    margin-top: 1.5em;
+    margin-bottom: 1.5em;
+    }
+    &--box{
+    display: flex;
+    align-items: center;
+    
+        &--text{
+            line-height: 2;  
+            text-align: justify;
+        }
+        // &--empty{
+        //     width: 50%;
+        //     background-color: $color-bg;
+            
+        // }
+    }
+  }
