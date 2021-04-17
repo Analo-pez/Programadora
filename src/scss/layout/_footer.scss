@@ -1,5 +1,39 @@
 .page__footer {
+  background-color: $color-primary;
   width: 100vw;
-  padding: 1rem;
-  color: $color-secondary;
+  padding: 1em;
+  display: flex;
+  justify-content: space-between;
+  &--icons{
+    display: flex;
+    justify-content: flex-end;
+    a{
+      color: $color-dark;
+      :hover {
+        color:green;
+      }
+    }
+    @media all and (min-width: 768px) {
+      font-size: 20px;
+     
+    }
+    @media all and (min-width: 1200px) {
+      font-size: 30px;
+    }
+      .fab,
+      .fas {
+        display: inline-block;
+        transition: color ease 0.5s;
+      }
+
+      .fab:after {
+        content: " · ";
+        margin: 8px;
+        font-weight: bold;
+        @media all and (min-width: 768px) {
+          content: " | ";
+          margin: 15px;
+        }
+      }
+  }
 }

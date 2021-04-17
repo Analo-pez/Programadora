@@ -2,8 +2,8 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding-bottom: 2em;
-    // background-color: $color-primary;
+    background-color: $color-primary;
+    height: 100vh;
 
     &--title{
     align-self: center;
@@ -13,15 +13,16 @@
     &--box{
     display: flex;
     align-items: center;
+    padding-bottom: 3em;
     
         &--text{
             line-height: 2;  
-            text-align: justify;
+            text-align: center;
+            @media all and (min-width: 768px) {
+                font-size: 1.2em;
+            }
         }
-        // &--empty{
-        //     width: 50%;
-        //     background-color: $color-bg;
-            
-        // }
     }
   }
+
+  

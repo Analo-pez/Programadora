@@ -1,20 +1,22 @@
 .page__header {
   display: flex;
   justify-content: center;
-  height: 8vh;
+  height: 12vh;
 
   &--nav{
     display: flex;
     align-items: center;
-
+    
     &--items{
       display: flex;
       flex-direction: row;   
       width: 65vw;
       justify-content: space-around;
-
     }
  
   }
-
+a{
+  color: $color-bg;
+  text-transform: uppercase;
+}
 }

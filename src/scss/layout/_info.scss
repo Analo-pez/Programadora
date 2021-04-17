@@ -1,0 +1,52 @@
+:root {
+    --cover-size: 10rem;
+  }
+  
+  @media (max-width: 800px) {
+      :root {
+            --cover-size: 6rem;
+      }
+  }
+
+  .page__info{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    padding-bottom: 6em;
+    padding-top: 5em;
+    border-top-right-radius: 50%;
+      &--title{
+        align-self: center;
+        padding-top: 2em;
+        margin-bottom: 3em;
+      }
+  }
+  
+  .tecnos {
+    overflow-y: hidden;
+    white-space: nowrap;
+    background-color: #333;
+  
+    outline: 2px solid $color-primary;
+  }
+  
+  .tecnos li {
+    display: inline-block;
+    width: var(--cover-size);
+    height: var(--cover-size);
+  }
+  
+  .tecnos li img {
+    display: block;
+    width: var(--cover-size);
+    height: var(--cover-size);
+  }
+  
+  .tecnos {
+    max-width: calc(var(--cover-size) * 6);
+    margin: 0 auto;
+    padding: calc(var(--cover-size) / 2) calc(50% - (var(--cover-size) / 2));
+  }
+  
+  
+  
