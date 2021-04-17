@@ -8,16 +8,8 @@
   margin-top: 1.5em;
   margin-bottom: 1.5em;
   }
-
-  // &--list{
-  //   display: flex;
-  //   align-self: center;
-  //   gap: 2em;
-  // }
 }
 
-
-//NUEVO
 
 :root {
   --card-height: 40vw;
@@ -32,21 +24,6 @@
   margin-bottom: var(--card-margin); /* Don't include the --card-margin in padding, as that will affect the scroll-timeline*/
 }
 
-#card_1 {
-  --index: 1;
-}
-
-#card_2 {
-  --index: 2;
-}
-
-#card_3 {
-  --index: 3;
-}
-
-#card_4 {
-  --index: 4;
-}
 
 .card {
   position: sticky;
@@ -78,6 +55,7 @@
 
     animation: var(--duration) linear scale var(--delay) forwards;
     animation-timeline: cards-element-scrolls-in-body;
+
   }
 
   @keyframes scale {
@@ -146,6 +124,7 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+  border-left:1px solid $color-dark;
 }
 
 
