@@ -80,14 +80,15 @@
 
 .menuppal__items {
 	text-align: left;
-  padding: 2em;
+  	padding: 2em;
 	font-size: 1.5rem;
 	line-height: 3em;
-  text-transform: uppercase;
+	width: 100vw;
+  	text-transform: uppercase;
   @media all and (min-width: 768px) {
       display: flex;
       flex-direction: row;   
-      width: 65vw;
+	  text-align: center;
       justify-content: space-around;
       a{
         color: $color-bg;

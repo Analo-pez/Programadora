@@ -2,12 +2,20 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
+  width: 100vw;
 
   &--title{
-  align-self: center;
-  margin-top: 1.5em;
-  margin-bottom: 1.5em;
+    font-size: 1em;
+    margin-top: 1.5em;
+    margin-bottom: 1.5em;
+    align-self: center;
+    @media all and (min-width: 768px) {
+    font-size: 2em;
+  
   }
+  }
+  
 }
 
 #card_1{
@@ -34,11 +42,15 @@
 
 
 :root {
-  --card-height: 40vw;
   --card-margin: 4vw;
-  --card-top-offset: 2em;
-  --numcards: 7;
-  --outline-width: 0px;
+
+  @media all and (min-width: 768px) {
+    --card-height: 40vw;
+    --card-margin: 4vw;
+    --card-top-offset: 2em;
+    --numcards: 7;
+    --outline-width: 0px;
+  }
 }
 
 #cards {
@@ -47,9 +59,14 @@
 }
 
 .card {
-  position: sticky;
-  top: 0;
-  padding-top: calc(var(--index) * var(--card-top-offset));
+  width: 60vw;
+  @media all and (min-width: 768px) {
+    position: sticky;
+    top: 0;
+    padding-top: calc(var(--index) * var(--card-top-offset));
+    width: 100%;
+  }
+
 }
 
 @supports (animation-timeline: works) {
@@ -96,7 +113,6 @@
 
 
 #cards {
-  list-style: none; 
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: repeat(var(--numcards), var(--card-height));
@@ -110,42 +126,64 @@
   color: rgb(10, 5, 7);
   border-radius: 1em;
   overflow: hidden;
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: center;
 
-  display: grid;
-  grid-template-areas: "text img";
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: auto;
-
+  @media all and (min-width: 768px) {
+    display: grid;
+    grid-template-areas: "text img";
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+  }
+ 
 }
 
 .card__content > div {
-  grid-area: text;
-  width: 80%;
-  place-self: center;
-  text-align: left;
-
-  display: grid;
-  gap: 1em;
-  place-items: start;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap:1em;
+  p{
+    padding: 1em;
+    text-align: justify;
+  }
+  @media all and (min-width: 768px) {
+    grid-area: text;
+    width: 80%;
+    place-self: center;
+    text-align: left;
+  }
+  
 }
 
 .card__content > figure {
-  grid-area: img;
-  overflow: hidden;
+  display: flex;
+  order:1;
+  @media all and (min-width: 768px) {
+    grid-area: img;
+    overflow: hidden;
+
+  }
 }
 
 .card__content > figure > img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-left:1px solid $color-dark;
+ height: 200px;
+
+  @media all and (min-width: 768px) {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-left:1px solid $color-dark;
+      }
 }
 
 
 .btn {
   background-color: $color-primary;
-  text-decoration: none;
-  display: inline-block;
   padding: 0.5em;
+  border: transparent;
   border-radius: 0.25em;
+  width: 50%;
 }
