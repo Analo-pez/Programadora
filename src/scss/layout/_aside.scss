@@ -4,25 +4,46 @@
     justify-content: center;
     background-color: $color-primary;
     height: 100vh;
+  
 
-    &--title{
-    align-self: center;
-    margin-top: 1.5em;
-    margin-bottom: 1.5em;
-    }
-    &--box{
-    display: flex;
-    align-items: center;
-    padding-bottom: 3em;
     
+    &--figure{
+    display: none;
+        @media all and (min-width: 1000px) {
+            width: 100%;
+            height: 25%;
+            display: grid;
+            grid-template-columns: repeat(9, 1fr);
+            grid-template-rows: 1fr;
+            transform: translateY(-50%);
+            }
+    }
+
+    &--box{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 3em;
+        width: 100vw;        
+        &--title{
+        align-self: center;
+        margin-bottom: 1.5em;
+        }
         &--text{
+            font-size: 1em;
             line-height: 2;  
             text-align: center;
             @media all and (min-width: 768px) {
-                font-size: 1.2em;
+                font-size: 1.4em;
             }
         }
     }
   }
 
-  
+
+
+
+  .item-1, .item-3, .item-5, .item-7, .item-9{
+    background-color: $color-dark;
+}
+

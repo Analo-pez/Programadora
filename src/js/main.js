@@ -117,11 +117,21 @@ hookAnimations();
 
 // MENU HAMBURGUESA
 var menu = document.querySelector('.hamburger');
+const btn = document.querySelectorAll('.list-item')
 
 function toggleMenu(event) {
     this.classList.toggle('is-active');
     document.querySelector('.menuppal').classList.toggle("is_active");
     event.preventDefault();
 }
+
+function close(ev) {
+    document.querySelector('.menuppal').classList.toggle("is_active");
+}
+
+btn.forEach(element => {
+    element.addEventListener('click', close)
+});
+
 
 menu.addEventListener('click', toggleMenu, false);
