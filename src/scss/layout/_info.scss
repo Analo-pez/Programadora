@@ -1,5 +1,5 @@
 :root {
-    --cover-size: 10rem;
+    --cover-size: 8rem;
   }
   
   @media (max-width: 800px) {
@@ -9,19 +9,27 @@
   }
   @media (max-width: 500px) {
       :root {
-            --cover-size: 4rem;
+            --cover-size: 3rem;
+      }
+  @media (max-width: 350px) {
+      :root {
+            --cover-size: 2.5rem;
       }
   }
+}
  
 
   .page__info{
     display: flex;
     flex-direction: column;
-    height: 100vh;
+    height: 70vh;
+    @media (min-width: 768px) {
+      height: 90vh;
+      }
       &--title{
         align-self: center;
-        padding-top: 2em;
-        margin-bottom: 3em;
+        padding-top: 3em;
+        margin-bottom: 2em;
       }
   }
   
@@ -45,8 +53,8 @@
   }
   
   .tecnos {
-    max-width: calc(var(--cover-size) * 6);
+    max-width: calc(var(--cover-size) * 5);
     margin: 0 auto;
-    padding: calc(var(--cover-size) / 2) calc(50% - (var(--cover-size) / 2));
+    padding: calc(var(--cover-size) / 1.5) calc(50% - (var(--cover-size) / 2));
   }
   
