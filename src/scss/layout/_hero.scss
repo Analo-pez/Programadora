@@ -30,6 +30,9 @@ height: 70vh;
     margin: 0 0.5rem;
     animation: animate__fadeInBottomRight; 
     animation-duration: 1.5s; 
+    @media (min-width: 350px){
+    width: 10em;
+  }
     
     @media all and (min-width: 768px) {
         width: 14em;

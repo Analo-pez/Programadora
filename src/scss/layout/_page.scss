@@ -10,6 +10,9 @@
     margin-top: 1.5em;
     margin-bottom: 1.5em;
     align-self: center;
+    @media (min-width: 350px){
+      font-size: 0.8;
+    }
     @media all and (min-width: 768px) {
     font-size: 2em;
   
@@ -136,6 +139,7 @@
     grid-template-areas: "text img";
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto;
+    padding-bottom: 0 ;
   }
  
 }
